@@ -1,0 +1,326 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(227, 244, 252);
+  margin-top: 3%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calc-container{
+ display: flex;
+ width: 60%;
+ height: auto;
+ background-color: white;
+ border-bottom-left-radius: 20px;
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+ border-bottom-right-radius: 20px;
+}
+
+.calc-itself{
+  width: 50%;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  padding-left: 2%;
+  padding-right: 2%;
+  position: relative;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+.header p{
+  color: grey;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.header p:hover{
+  color: red;
+}
+
+.amount{
+  /* background-color: green; */
+  margin-bottom: 20px;
+}
+.amount label{
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 100px;
+  /* background-color: red; */
+}
+.amount2{
+  display: flex;
+  background-color: rgb(228, 244, 252);
+  margin-top: 15px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.amount2 input {
+  border: none;
+  margin-left: 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.amount2 p {
+  align-self: center;
+  padding-left: 10px;
+  font-weight: 900;
+}
+
+.calculation{
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: red; */
+}
+
+.mterm label{
+  font-size: 16px;
+  color: grey;
+}
+.mterm{
+  width: 100%
+}
+
+.mterm2{
+  display: flex;
+  background-color: rgb(228, 244, 252);
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 15px;
+  width: 95%;
+  /* border: 1px solid green; */
+}
+.mterm2 input{
+  width: 68%;
+  border: 0px;
+  font-size: 20px;
+  border-radius: 5px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.mterm2 p{
+  align-self: center;
+  padding-left: 5px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.irate{
+  width: 100%;
+}
+
+.irate label{
+  font-size: 16px;
+  color: grey;
+}
+.irate2{
+  display: flex;
+  background-color: rgb(228, 244, 252);
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 15px;
+  width: 100%;
+}
+.irate2 input{
+  width: 80%;
+  border: 0;
+  font-size: 20px;
+  border-radius: 5px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.irate2 p{
+  align-self: center;
+  padding-left: 15px;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.type{
+  /* height: auto; */
+  /* border: 1px solid green;  */
+}
+.type h3{
+  /* background-color: red; */
+  margin-bottom: 10px;
+  color: grey;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+
+.repayment{
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 15px; 
+  cursor: pointer;
+}
+.repayment label{
+  cursor: pointer;
+}
+.repayment:hover{
+  border: 1px solid yellowgreen;
+}
+
+.interestonly{
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 900; 
+  cursor: pointer;
+}
+.interestonly label{
+  cursor: pointer;
+}
+.interestonly:hover{
+  border: 1px solid yellowgreen;
+}
+
+button {
+  /* position: absolute; */
+  /* bottom: 20px; */
+  margin-top: 5%;
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 900;
+  font-size: 18px;
+  align-self: center;
+  background-color: rgb(217, 219, 48);
+  cursor: pointer;
+}
+
+button img {
+  align-self: center;
+  position: absolute;
+  left: 20px;
+}
+button:hover{
+  background-color: rgb(234, 237, 149);
+}
+.calc-result{
+  background-color: rgb(19, 48, 64);
+  width: 50%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 70px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px
+}
+
+.calc-result img{
+  width: 50%;
+  margin: auto; 
+}
+
+.results{
+  /* background-color: red; */
+  text-align: center;
+  width: 95%;
+  padding: 3px 0;
+  margin: auto;
+}
+.results p{
+  font-weight: 100;
+  font-size: 15px;
+}
+.calc-result h5{
+  font-weight: 100;
+  font-size: 18px;
+}
+.actdisplay{
+  background-color: rgb(5, 24, 34);
+  height: auto;
+  padding: 15px;
+  border-radius: 10px;
+  border-top: 2px solid yellow; 
+}
+.actdisplay h1{
+  color: yellow;
+}
+
+.remdisplay{
+  margin-top: 30px;
+  /* border: 3px solid green; */
+}
+
+.calculated{
+  display: none;
+}
+.notcalculated{
+  display: flex;
+  flex-direction: column;
+  /* display: none; */
+}
+#error1, #error2, #error3, #error4{
+  color: red;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1200px) {
+  body{
+    background-color: white;
+  }
+  .calc-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .calc-itself{
+    width: 100%;
+    height: auto;
+    margin-bottom: 3%;
+  }
+  .mterm{
+    width: 100%;
+  }
+  .irate{
+    width: 100%;
+  }
+  button img{
+    margin: 0 5%;
+    left: 0;
+  }
+  .calc-result{
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  button img{
+    display: none;
+  }
+  #error1, #error2, #error3, #error4{
+  font-size: 14px;
+  }
+}

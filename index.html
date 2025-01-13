@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Repayment Calculator</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <div class="calc-container">
+    <div class="calc-itself">
+      <div class="header" id="header">
+        <h3> Mortgage Calculator </h3>
+        <p id="clear" onclick={handleClear()}> Clear All </p>
+      </div>
+
+      <form class="amount">
+        <label for="Mortgageamount"> Mortgage Amount </label> <br>
+        <div class="amount2" id="amount2">
+          <p id="amount2p"> $ </p>
+          <input id="Mortgageamount" type="number" name="mamount" value=""/>
+        </div>
+        <p id="error1"> </p>
+      </form>
+
+      <div class="calculation">
+        <form class="mterm">
+          <label for="Mortgageterm"> Mortgage Term </label>
+          <div class="mterm2" id="mterm2">
+            <input id="Mortgageterm" type="number" name="mterm" min="0" />
+            <p id="mtermp"> years </p>
+          </div>
+          <p id="error2"> </p>
+        </form> 
+      
+        <form class="irate">
+          <label for="Interestrate"> Interest Rate </label>
+          <div class="irate2" id="irate2">
+            <input id="Interestrate" type="number" name="irate" min="0" />
+            <p id="iratep"> % </p>
+          </div>
+          <p id="error3"> </p>
+        </form>
+      </div>
+
+      <div class="type">
+        <h3> Mortgage Type </h3>
+        <form id="mtypeform">
+          <div class="repayment">
+            <input id="repaymentval" type="radio" name="plans" value="repayment" />
+            <label for="repaymentval"> Repayment </label> <br>
+          </div>
+
+          <div class="interestonly">
+            <input type="radio" value="interestonly" id="interestonly" name="plans"/>
+            <label for="interestonly">Interest Only</label>
+          </div>
+          <p id="error4"> </p>
+        </form>
+        <button onclick={handleSubmit()} > <img src="./images/icon-calculator.svg" /> Calculate Repayments </button>
+      </div>
+    </div>
+
+    <div class="calc-result">
+      <div class="notcalculated" id="notcalculated">
+        <img src="./images/illustration-empty.svg" />
+        <div class="results">
+          <h3> Results shown here </h3>
+          <p> Complete the form and click "Calculate repayments" to see what your monthly repayments should be </p>
+        </div>
+      </div>
+      <div class="calculated" id="calculated">
+        <div>
+          <h2> Your results </h2>
+          <h5> Your results are shown based on the information you provided. To adjust the result, edit the form and click "Calculate repayment" again. </h5>
+        </div>
+        <div class="actdisplay">
+          <p> Your monthly repayments </p>
+          <h1 id="mrepayment"> </h1>
+          <div class="remdisplay">
+            <p> Total you'll repay over the term is </p>
+            <h3 id="trepayment"> </h3>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
